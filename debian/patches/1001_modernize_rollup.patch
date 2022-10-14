@@ -1,0 +1,13 @@
+Description: use newer namespaced rollup plugin
+Author: Jonas Smedegaard <dr@jones.dk>
+Last-Update: 2020-12-29
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/rollup.config.js
++++ b/rollup.config.js
+@@ -1,4 +1,4 @@
+-import resolve from "rollup-plugin-node-resolve"
++import resolve from "@rollup/plugin-node-resolve"
+ import sourcemaps from "rollup-plugin-sourcemaps"
+ 
+ export default [

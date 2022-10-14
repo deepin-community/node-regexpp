@@ -1,0 +1,34 @@
+Source: node-regexpp
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders:
+ Jonas Smedegaard <dr@jones.dk>,
+Build-Depends:
+ debhelper-compat (= 13),
+ eslint <!nocheck>,
+ mocha <!nocheck>,
+ node-rollup-plugin-node-resolve (>= 9),
+ node-rollup-plugin-sourcemaps,
+ node-types-eslint <!nocheck>,
+ node-typescript,
+ pandoc <!nodoc>,
+ rollup,
+ ts-node,
+ unicode-data,
+Standards-Version: 4.6.0
+Homepage: https://github.com/mysticatea/regexpp
+Vcs-Browser: https://salsa.debian.org/js-team/node-regexpp
+Vcs-Git: https://salsa.debian.org/js-team/node-regexpp.git
+Rules-Requires-Root: no
+
+Package: node-regexpp
+Architecture: all
+Depends:
+ ${misc:Depends},
+Description: regular expression parser for ECMAScript - Node.js library
+ regexpp is a Node.js module
+ for parsing ECMAScript (a.k.a. JavaScript) code
+ using regular expressions.
+ .
+ Node.js is an event-based server-side JavaScript engine.

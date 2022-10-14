@@ -1,0 +1,73 @@
+node-regexpp (3.2.0-2) unstable; urgency=medium
+
+  * Team Upload.
+  * d/tests/control: Check require in the AUTOPKGTEST_TMP
+    instead of source dir (Closes: #996715)
+
+ -- Nilesh Patra <nilesh@debian.org>  Sun, 17 Oct 2021 23:51:41 +0530
+
+node-regexpp (3.2.0-1) unstable; urgency=medium
+
+  [ upstream ]
+  * new release
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 23 Sep 2021 17:50:25 +0200
+
+node-regexpp (3.1.0-7) unstable; urgency=medium
+
+  * check testsuite;
+    build-depend on mocha node-types-eslint ts-node
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 23 Sep 2021 17:38:47 +0200
+
+node-regexpp (3.1.0-6) unstable; urgency=medium
+
+  * update copyright info:
+    + use Reference field (not License-Reference);
+      tighten lintian overrides
+    + update coverage
+  * simplify source helper script copyright-check
+  * declare compliance with Debian Policy 4.6.0
+  * use debhelper compatibility level 13 (not 12)
+  * update git-buildpackage config: add usage comment
+  * unfuzz patch 2002
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 23 Sep 2021 16:45:14 +0200
+
+node-regexpp (3.1.0-5) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository, Repository-Browse.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sun, 29 Aug 2021 01:11:07 +0100
+
+node-regexpp (3.1.0-4) unstable; urgency=medium
+
+  * add patch 1001 to use newer namespaced rollup plugin
+  * tighten to build-depend versioned
+    on node-rollup-plugin-node-resolve
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 01 Jan 2021 06:19:51 +0100
+
+node-regexpp (3.1.0-3) unstable; urgency=medium
+
+  * fix have autopkgtest depend on nodejs
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sun, 27 Dec 2020 04:34:16 +0100
+
+node-regexpp (3.1.0-2) unstable; urgency=medium
+
+  * fix long description
+    (had bogus copy-paste leftover from unrelated package)
+  * copyright: shorten Source URL
+  * unconditionally skip refresh unicode ids and properties
+    (not only when targeted experimental)
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sun, 13 Dec 2020 23:50:04 +0100
+
+node-regexpp (3.1.0-1) experimental; urgency=low
+
+  * initial release;
+    closes: bug#945999
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sun, 06 Dec 2020 11:55:56 +0100

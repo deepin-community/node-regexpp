@@ -1,0 +1,3 @@
+  * lint-check code when ESLint plugins are in Debian
+  * refresh unicode ids and properties when ts-node works
+  * maybe run dts-bundle when in Debian

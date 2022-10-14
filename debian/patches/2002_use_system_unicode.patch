@@ -1,0 +1,59 @@
+--- a/scripts/update-unicode-ids.ts
++++ b/scripts/update-unicode-ids.ts
+@@ -1,8 +1,8 @@
+ import fs from "fs"
+-import http from "http"
++import readline from "readline"
+ import { CLIEngine } from "eslint"
+ 
+-const DB_URL = "http://unicode.org/Public/UNIDATA/DerivedCoreProperties.txt"
++const SRC_PATH = "/usr/share/unicode/DerivedCoreProperties.txt"
+ const FILE_PATH = "src/unicode/ids.ts"
+ const ID_START = /^([0-9a-z]+)(?:\.\.([0-9a-z]+))?[^;]*; ID_Start /iu
+ const ID_CONTINUE = /^([0-9a-z]+)(?:\.\.([0-9a-z]+))?[^;]*; ID_Continue /iu
+@@ -18,7 +18,7 @@
+     const idContinueSmall: [number, number][] = []
+     const idContinueLarge: [number, number][] = []
+ 
+-    logger.log("Fetching data... (%s)", DB_URL)
++    logger.log("Fetching data... (%s)", SRC_PATH)
+     await processEachLine(line => {
+         let m: RegExpExecArray | null = null
+         if (banner === "") {
+@@ -125,29 +125,16 @@
+ })
+ 
+ function processEachLine(cb: (line: string) => void): Promise<void> {
++    const rl = readline.createInterface({
++        fs.createReadStream(SRC_PATH),
++        crlfDelay: Infinity
++    })
+     return new Promise((resolve, reject) => {
+-        http.get(DB_URL, res => {
+-            let buffer = ""
+-            res.setEncoding("utf8")
+-            res.on("data", chunk => {
+-                const lines = (buffer + String(chunk)).split("\n")
+-                if (lines.length === 1) {
+-                    buffer = lines[0]
+-                } else {
+-                    buffer = lines.pop()!
+-                    for (const line of lines) {
+-                        cb(line)
+-                    }
+-                }
+-            })
+-            res.on("end", () => {
+-                if (buffer) {
+-                    cb(buffer)
+-                }
++        rl
++            .on("line", res => {
+                 resolve()
+             })
+-            res.on("error", reject)
+-        }).on("error", reject)
++            .on("error", reject)
+     })
+ }
+ 

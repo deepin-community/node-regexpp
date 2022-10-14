@@ -1,0 +1,5 @@
+Test-Command: set -e; cd "$AUTOPKGTEST_TMP"; node -e "require('regexpp');"
+Depends:
+ node-regexpp,
+ nodejs,
+Restrictions: superficial
