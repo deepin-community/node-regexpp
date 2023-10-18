@@ -16,15 +16,6 @@ ESLINT += --format unix
 MOCHA += --reporter dot --no-colors
 endif
 
-%:
-	dh $@
-
-%.html: %.md
-	pandoc --from gfm-raw_html --to html --standalone --output $@ $<
-
-%.txt: %.md
-	pandoc --from gfm-raw_html --to plain --output $@ $<
-
 override_dh_clean:
 	dh_clean -- $(DOCS)
 
@@ -48,3 +39,12 @@ override_dh_auto_test:
 
 override_dh_installdocs:
 	dh_installdocs --all -- $(DOCS)
+
+%.html: %.md
+	cmark-gfm $< > $@
+
+%.txt: %.md
+	cmark-gfm --to plaintext $< > $@
+
+%:
+	dh $@

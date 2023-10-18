@@ -1,0 +1,19 @@
+Description: fix for rollup 3
+Author: Yadd <yadd@debian.org>
+Bug-Debian: https://bugs.debian.org/1022649
+Forwarded: not-needed
+Last-Update: 2022-10-26
+
+--- a/rollup.config.js
++++ b/rollup.config.js
+@@ -1,7 +1,7 @@
+-import resolve from "@rollup/plugin-node-resolve"
+-import sourcemaps from "rollup-plugin-sourcemaps"
++const resolve = require("@rollup/plugin-node-resolve").nodeResolve
++const sourcemaps = require("rollup-plugin-sourcemaps")
+ 
+-export default [
++module.exports = [
+     {
+         input: ".temp/index.js",
+         output: {

@@ -1,3 +1,25 @@
+node-regexpp (3.2.0-4) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints. + node-regexpp: Add Multi-Arch: foreign.
+
+  [ Yadd ]
+  * Update standards version to 4.6.1, no changes needed.
+  * Add fix for rollup 3 (Closes: #1022649)
+  * Fix nocheck target
+
+ -- Yadd <yadd@debian.org>  Thu, 27 Oct 2022 13:54:52 +0200
+
+node-regexpp (3.2.0-3) unstable; urgency=medium
+
+  * generate documentation with cmark-gfm (not pandoc);
+    build-depend on cmark-gfm (not pandoc)
+  * tighten lintian overrides
+
+ -- Jonas Smedegaard <dr@jones.dk>  Mon, 28 Feb 2022 11:28:19 +0100
+
 node-regexpp (3.2.0-2) unstable; urgency=medium
 
   * Team Upload.
