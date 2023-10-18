@@ -16,7 +16,9 @@ Files: README.md
  debian/patches/2002_use_system_unicode.patch
  debian/patches/series
  debian/rules
+ debian/salsa-ci.yml
  debian/source/format
+ debian/source/lintian-overrides
  debian/tests/control
  debian/upstream/metadata
  debian/watch
@@ -78,11 +80,5 @@ License: Expat
 Files: LICENSE
 Copyright: 2018, Toru Nagashima
 License: Expat
- FIXME
-
-Files: debian/source/lintian-overrides
-Copyright: debian/copyright GPL-3+
-  debian/copyright gpl-3+
-License: UNKNOWN
  FIXME
 
