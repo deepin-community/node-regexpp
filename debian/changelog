@@ -1,3 +1,13 @@
+node-regexpp (3.2.0-5) unstable; urgency=medium
+
+  * Team upload
+  * Update lintian override info format in d/source/lintian-overrides
+    on line 2-3
+  * Update standards version to 4.6.2, no changes needed
+  * Add missing link to undici-types (Closes: #1058507)
+
+ -- Yadd <yadd@debian.org>  Wed, 13 Dec 2023 06:49:47 +0400
+
 node-regexpp (3.2.0-4) unstable; urgency=medium
 
   * Team upload

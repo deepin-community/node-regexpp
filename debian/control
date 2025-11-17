@@ -18,7 +18,7 @@ Build-Depends:
  rollup,
  ts-node,
  unicode-data,
-Standards-Version: 4.6.1
+Standards-Version: 4.6.2
 Homepage: https://github.com/mysticatea/regexpp
 Vcs-Browser: https://salsa.debian.org/js-team/node-regexpp
 Vcs-Git: https://salsa.debian.org/js-team/node-regexpp.git
