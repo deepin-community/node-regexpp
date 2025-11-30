@@ -22,6 +22,7 @@ override_dh_clean:
 override_dh_auto_configure:
 	mkdir -p node_modules/@types
 	cp --force --recursive --target node_modules/@types $(addprefix /usr/share/nodejs/@types/,eslint estree json-schema node)
+	ln -s /usr/share/nodejs/undici-types node_modules/
 
 # TODO: refresh unicode ids and properties when ts-node works
 override_dh_auto_build: $(DOCS)
